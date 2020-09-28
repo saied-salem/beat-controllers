@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beat.Website", "Beat\Beat.Website.csproj", "{8A234641-2204-45AC-A5AC-206800C642E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beat.Models", "Beat.Models\Beat.Models.csproj", "{5CD83317-190C-4160-9641-31E193674605}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beat.Model", "Beat.Model\Beat.Model.csproj", "{5CD83317-190C-4160-9641-31E193674605}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

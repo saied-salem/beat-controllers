@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Beat.Models.Enums;
 
-namespace Beat.Models
+namespace Beat.Model
 {
-    public class Event
+    class Sponsor
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Abbreviation { get; set; }
-public EventTypes EventType { get; set; }
-
+        public List<Event> Events { get; set; }
+        public string ContactNumber { get; set; }
+        public double Fund { get; set; } // Finiancial Classes
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Beat.Models;
+using Beat.Model;
 
 namespace Beat.Controllers
 {
@@ -11,8 +11,6 @@ namespace Beat.Controllers
     {
         public ActionResult Index()
         {
-            Activity activity = new Activity();
-            activity.Name="asdasd";
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
