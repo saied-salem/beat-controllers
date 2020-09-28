@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Beat.Interfaces;
 using Beat.Model;
+using Beat.Services;
 
 namespace Beat.Controllers
 {
     public class HomeController : Controller
     {
+        private IMemberService _memberService;
+
+        public HomeController()
+        {
+            _memberService = new MemberService();
+        }
         public ActionResult Index()
         {
+            var member = _memberService.GetAll();
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();

@@ -884,9 +884,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Beat.Interfaces\Beat.Interfaces.csproj">
+      <Project>{6c8ca7ed-3561-44e7-b3fc-80900cc399d1}</Project>
+      <Name>Beat.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Beat.Model\Beat.Model.csproj">
       <Project>{5cd83317-190c-4160-9641-31e193674605}</Project>
       <Name>Beat.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beat.Services\Beat.Services.csproj">
+      <Project>{fb367f1e-0ae8-4e8c-8680-c286beed79f7}</Project>
+      <Name>Beat.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
