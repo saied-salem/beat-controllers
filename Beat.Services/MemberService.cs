@@ -23,7 +23,7 @@ namespace Beat.Services
             return db.Members.ToList();
         }
 
-        public Member GetById(Guid id)
+        public Member GetById(int id)
         {
             return db.Members.FirstOrDefault(m => m.Id == id);
         }

@@ -10,6 +10,6 @@ namespace Beat.Interfaces
     public interface IMemberService
     {
         List<Member> GetAll();
-        Member GetById(Guid id);
+        Member GetById(int id);
     }
 }

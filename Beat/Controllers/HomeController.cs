@@ -19,7 +19,7 @@ namespace Beat.Controllers
         }
         public ActionResult Index()
         {
-            var member = _memberService.GetAll();
+            var members = _memberService.GetAll();
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
