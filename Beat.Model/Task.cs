@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Beat.Model
 {
-    class Task
+    public class Task
     {
         public int Id { get; set; }
-        public List<Member> Members;
+        public List<Member> Members { get; set; }
         public Track Track { get; set; } //committee
         public string Name { get; set; }
         public string Description { get; set; }
