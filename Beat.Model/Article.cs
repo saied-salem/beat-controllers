@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Beat.Model
 {
-    class Article
+    public class Article
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

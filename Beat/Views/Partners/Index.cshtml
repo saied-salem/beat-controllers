@@ -1,0 +1,50 @@
+﻿@using Beat.Model
+@using Kendo.Mvc.UI
+
+@(Html.Kendo().Grid<Partner>()
+    .Name("Patner_Grid")
+    .Columns(columns =>
+    {
+
+        columns.Bound(c => c.Id);
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.Abbreviation);
+        columns.Bound(c => c.ContactPerson);
+        columns.Bound(c => c.ContactNumber);
+        columns.Command(command => command.Destroy()).Width(150);
+    })
+    .ToolBar(toolbar => {
+        toolbar.Create();
+        toolbar.Save();
+    })
+    .HtmlAttributes(new { style = "height: 550px;" })
+    .Selectable()
+    .Editable(editable => editable.Mode(GridEditMode.InCell))
+    .Pageable(pageable => pageable
+        .Refresh(true)
+        .PageSizes(true)
+        .ButtonCount(5))
+    .Navigatable()
+    .Sortable()
+    .Scrollable()
+
+    .Groupable()
+
+    .DataSource(dataSource => dataSource
+    .Ajax()
+        .Batch(true)
+        .PageSize(20)
+        .ServerOperation(false)    
+       //.Events(events => events.Error("error_handler"))
+     
+
+       .ServerOperation(false)
+       .Read(read => read.Action("Partners_Read", "Partners"))
+        .Model(model => model.Id(p => p.Id))
+        .Create(Create => Create.Action("Partners_Create", "Partners"))
+    .Update(Update => Update.Action("Partners_Update", "Partners"))
+    .Destroy(Destroy => Destroy.Action("Partners_Destroy", "Partners"))
+    
+    .PageSize(20)
+    )
+    )

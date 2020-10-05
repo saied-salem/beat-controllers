@@ -20,7 +20,7 @@ namespace Beat.Services
 
         public List<Member> GetAll()
         {
-            return db.Members.ToList();
+            return null;
         }
 
         public Member GetById(int id)
